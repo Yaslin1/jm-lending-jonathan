@@ -1,0 +1,212 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  overflow: hidden;
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  overflow: auto;
+}
+
+.bg-image {
+  background-image: url("/bg-image-4.jpeg");
+  background-size: cover;
+  background-position: 50% 0%;
+  background-repeat: no-repeat;
+  filter: blur(3px);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
+.container {
+  position: relative;
+  margin: 0 auto;
+  width: 100vw;
+  min-height: 100vh;
+  max-width: 1024px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 2em 0;
+  background-attachment: fixed;
+
+}
+
+.container .logo-container {
+  width: 250px;
+  height: 250px;
+  overflow: hidden;
+}
+
+.container>div:first-child img {
+  width: 700px;
+  position: relative;
+  top: -40%;
+  left: -91%;
+}
+
+.social-btn-container {
+  margin: 1em 0;
+  width: 60%;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.social-btn-container button {
+  width: 62px;
+  height: 62px;
+  background-color: rgba(255, 255, 255, 0.439);
+  border: none;
+  transition: color 0.25s ease, background-color 0.25s ease, border-color 0.25s ease;
+  cursor: pointer;
+  margin-bottom: 1em;
+}
+
+.social-btn-container button:hover {
+  background-color: rgba(255, 255, 255);
+}
+
+.social-btn-container button svg {
+  fill: #053b69;
+  width: 50%;
+  height: 50%;
+}
+
+.hr {
+  width: 150px;
+  height: 2px;
+  background-color: white;
+  border: none;
+
+}
+
+.cta-btn-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 1em 0;
+  width: 75%;
+  justify-content: space-evenly;
+}
+
+.cta-btn-container button {
+  background-color: #053b69;
+  border: none;
+  border-radius: 50px;
+  padding: 1.25em;
+  width: 15%;
+  min-width: 200px;
+  max-width: 290px;
+  color: white;
+  text-transform: uppercase;
+  font-weight: bold;
+  margin: 1em 0;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.cta-btn-container button:hover {
+  background-color: #032440;
+}
+
+.cta-btn-container button a {
+  text-decoration: none;
+  color: white;
+}
+
+footer {
+  width: 60%;
+}
+
+.footer-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 1);
+}
+
+.footer-container>div:first-child {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.footer-container div {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+}
+
+@media screen and (max-width: 768px) {
+  /* .container>div:first-child img {
+  } */
+
+  .social-btn-container {
+    width: 80%;
+  }
+
+  .cta-btn-container {
+    width: 100%;
+  }
+
+  .cta-btn-container button {
+    width: 30%;
+  }
+
+  .footer-container {
+    flex-direction: column;
+  }
+
+  .footer-container div {
+    width: 100%;
+  }
+
+  .footer-container>div:first-child {
+    margin-bottom: 1em;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .bg-image {
+    background-size: 375%;
+  }
+
+  /* .container>div:first-child img {
+  } */
+
+  .social-btn-container {
+    width: 100%;
+  }
+
+  .social-btn-container button {
+    margin: 0 0.5em 1em 0.5em;
+  }
+
+  .cta-btn-container {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .cta-btn-container button {
+    width: 750%;
+    margin: 0.5em 0;
+  }
+
+  .footer-container {
+    padding: 0 1em;
+  }
+}
